@@ -1,5 +1,5 @@
 {
-  "name": "to-do-app",
+  "name": "app-landing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.14",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "bootstrap": "^5.2.2",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.4",
     "next": "13.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.3"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1",
+    "vitest": "^0.25.2"
   }
 }
