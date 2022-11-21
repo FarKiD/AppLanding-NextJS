@@ -1,9 +1,18 @@
+@use 'colors' as *;
+@use 'fontSizes' as *;
+
 html,
 body {
+  font-size: 62.5%;
   padding: 0;
   margin: 0;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  background: $black !important;
 }
 
 a {
@@ -15,12 +24,22 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+// * Font Sizes
+h1, .h1 {
+  font-size: $h1;
+}
+h2, .h2 {
+  font-size: $h2;
+}
+h3, .h3 {
+  font-size: $h3;
+}
+h4, .h4 {
+  font-size: $h4;
+}
+p, a, .p, .a, li, input {
+  font-size: $p;
+}
+span, .span {
+  font-size: $span
 }

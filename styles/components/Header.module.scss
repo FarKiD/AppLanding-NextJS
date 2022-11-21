@@ -1,0 +1,22 @@
+@use '../colors' as *;
+@use 'sass:color';
+
+.nav {
+  background: color.adjust($black, $alpha: -.2);
+  backdrop-filter: blur(1.2rem);
+  box-shadow: 0 0 .5rem $black;
+  color: $cyan;
+}
+
+.navItemsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+  list-style: none;
+  padding: 1rem;
+
+  li:nth-of-type(n + 2) {
+    padding: 0 0 0 1rem;
+  }
+}

@@ -1,0 +1,25 @@
+@use '../colors' as *;
+@use 'sass:color';
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introBtn {
+  background-color: color.adjust($red, $alpha: -.8);
+  border: 1px solid $red;
+  color: $cyan;
+  padding: .7rem 1.5rem;
+  text-decoration: none;
+  transition: 500ms;
+  border-radius: .3rem;
+}
+
+.introBtn:hover {
+  background-color: color.adjust($red, $alpha: -.2);
+  box-shadow: 0 0 0.6rem 0 color.adjust($red, $alpha: -.2);
+  color: $black1;
+  border-radius: .1rem;
+}
