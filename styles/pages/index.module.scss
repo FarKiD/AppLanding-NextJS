@@ -5,16 +5,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: $black;
+  padding: 13rem 0 0 0;
 }
 
 .introBtn {
   background-color: color.adjust($red, $alpha: -.8);
   border: 1px solid $red;
+  border-radius: .3rem;
   color: $cyan;
+  display: inline-block;
   padding: .7rem 1.5rem;
   text-decoration: none;
+  text-align: center;
   transition: 500ms;
-  border-radius: .3rem;
+  margin: 0 2rem 7rem 2rem;
+  width: 20vw;
+  min-width: 14rem;
+  max-width: 24rem;
 }
 
 .introBtn:hover {
@@ -22,4 +30,54 @@
   box-shadow: 0 0 0.6rem 0 color.adjust($red, $alpha: -.2);
   color: $black1;
   border-radius: .1rem;
+}
+
+.introText {
+  color: $cyan;
+  margin: 0 0 3rem 0;
+  text-align: center;
+
+  h1 {
+    margin: 0 0 3.5rem 0;
+  }
+}
+
+.introSecondButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    margin: 0 1.5rem;
+    padding: 1rem 1.6rem;
+  }
+}
+
+.githubBtn {
+  color: $green;
+  background: transparent;
+  border: 1px solid color.adjust($green, $alpha: -.6);
+  border-radius: .6rem;
+  transition: 500ms;
+}
+
+.githubBtn:hover {
+  border-radius: .1rem;
+  background: color.adjust($green, $alpha: -.9);
+  border: 1px solid $green;
+  color: $green;
+}
+
+.downloadBtn {
+  color: $black;
+  background: $green;
+  border-radius: .6rem;
+  transition: 500ms;
+}
+
+.downloadBtn:hover {
+  border-radius: .1rem;
+  background: color.adjust($green, $hue: 20%);
+  color: $black;
 }

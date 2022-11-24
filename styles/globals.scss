@@ -12,7 +12,8 @@ body {
 }
 
 body {
-  background: $black !important;
+  background-color: $black !important;
+  color: $cyan !important;
 }
 
 a {
@@ -41,5 +42,5 @@ p, a, .p, .a, li, input {
   font-size: $p;
 }
 span, .span {
-  font-size: $span
+  // font-size: $span
 }

@@ -2,7 +2,7 @@ import classes from '../styles/components/Header.module.scss';
 
 export default function Home() {
   return (
-    <header>
+    <header className={classes.header}>
       <nav className={classes.nav}>
         <ul className={classes.navItemsContainer}>
           <li>test 1</li>

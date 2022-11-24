@@ -1,10 +1,18 @@
 @use '../colors' as *;
 @use 'sass:color';
+@use '../util' as *;
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: color.adjust($black, $alpha: -.8);
+  backdrop-filter: blur(1rem);
+  box-shadow: 0 0 1rem $black;
+  @include border-faded(0 0 .1rem 0, left, $red);
+}
 
 .nav {
-  background: color.adjust($black, $alpha: -.2);
-  backdrop-filter: blur(1.2rem);
-  box-shadow: 0 0 .5rem $black;
   color: $cyan;
 }
 
@@ -15,6 +23,7 @@
   text-decoration: none;
   list-style: none;
   padding: 1rem;
+  margin: 0;
 
   li:nth-of-type(n + 2) {
     padding: 0 0 0 1rem;
