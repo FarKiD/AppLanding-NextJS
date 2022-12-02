@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'inter-bold';
+  src: url('../assets/fonts/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+$fonts: 'inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+$font-bold: 'inter-bold', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
