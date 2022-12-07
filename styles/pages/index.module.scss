@@ -4,9 +4,9 @@
 @use '../fonts' as *;
 
 @function multiple-box-shadow($n) {
-  $value: '#{random(2000)}px #{random(2000)}px #fff';
+  $value: '#{random(3000)}px #{random(2000)}px #fff';
   @for $i from 2 through $n {
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #fff'
+    $value: '#{$value} , #{random(3000)}px #{random(2000)}px #fff'
   }
   
   @return unquote($value);
@@ -47,23 +47,25 @@ $shadows-big:    multiple-box-shadow(100);
 }
 
 .stars1 {
-  @include stars(-10rem, .1rem, 50s);
+  @include stars(-10rem, .1rem, 30s);
 }
 
 .stars2 {
-  @include stars(0, .2rem, 100s);
+  @include stars(0, .2rem, 75s);
 }
 
 .stars3 {
-  @include stars(5rem, .3rem, 150s);
+  @include stars(5rem, .3rem, 120s);
 }
 
 .section1 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background: $black;
-  padding: 13rem 0 0 0;
   height: 80vh;
+  min-height: 65rem;
+  max-height: 100rem;
   overflow-y: hidden;
 }
 
@@ -160,6 +162,9 @@ $shadows-big:    multiple-box-shadow(100);
 .section2 {
   background: linear-gradient(to bottom, $cyan, color.adjust($cyan, $saturation: 20%, $lightness: 5%), $cyan);
   color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 35vh;
   min-height: 25rem;
   padding-top: 5rem;
@@ -174,6 +179,7 @@ $shadows-big:    multiple-box-shadow(100);
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 4rem;
   
   svg {
     width: 8rem;
@@ -197,4 +203,80 @@ $shadows-big:    multiple-box-shadow(100);
   @include border-faded(0 .1rem, bottom, $red);
 }
 
+// SECTION 3
 
+.section3 {
+  // background: color.adjust($black1, $saturation: -50%);
+  background: #eee;
+  color: $black1;
+  height: 45vh;
+}
+
+.contact_container {
+  margin: 3rem 0 0 0;
+  padding: 0 6rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  h3 {
+    color: $red;
+    margin-bottom: .8rem;
+    padding-bottom: .8rem; 
+    @include border-faded(0 0 .1rem 0, left, $red);
+  }
+
+  p {
+    margin-bottom: 2.4rem;
+
+    span {
+      font-family: $font-bold;
+    }
+  }
+
+  a {
+    background: color.adjust($purple, $alpha: -.9);
+    border: 1px solid $purple;
+    border-radius: .3rem;
+    color: $purple;
+    font-family: $font-bold;
+    text-decoration: none;
+    padding: .9rem 1.8rem;
+    transition: 300ms;
+  }
+
+  a:hover {
+    background: $purple;
+    border-radius: .1rem;
+    color: #eee;
+  }
+}
+
+.section3::before {
+  position: relative;
+  top: -.05rem;
+  background: $cyan;
+  content: ' ';
+  display: block;
+  height: 8rem;
+  width: 100%;
+  clip-path: polygon(50% 0, 0 0, 0 100%, 50% 0, 100% 100%, 100% 0);
+}
+
+// Footer
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1.6rem;
+  height: 4rem;
+
+  p {
+    margin: 0;
+  }
+}

@@ -8,12 +8,12 @@ export default function Home() {
         <ul className={classes.navItemsContainer}>
           <li>
             <Link className={classes.headerLink} href="#">
-              Link 1
+              Home
             </Link>
           </li>
           <li>
             <Link className={classes.headerLink} href="#">
-              Link 2
+              Portfolio
             </Link>
           </li>
           <li>
