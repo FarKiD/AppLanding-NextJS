@@ -47,3 +47,21 @@ p, a, .p, .a, li, input {
 span, .span {
   // font-size: $span
 }
+
+@media only screen and (max-width: 992px) {
+  h1, .h1 {
+    font-size: $h1-phone;
+  }
+  h2, .h2 {
+    font-size: $h2-phone;
+  }
+  h3, .h3 {
+    font-size: $h3-phone;
+  }
+  h4, .h4 {
+    font-size: $h4-phone;
+  }
+  p, a, .p, .a, li, input {
+    font-size: $p-phone;
+  }
+}

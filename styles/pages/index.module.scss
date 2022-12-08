@@ -233,6 +233,7 @@ $shadows-big:    multiple-box-shadow(100);
 
   p {
     margin-bottom: 2.4rem;
+    white-space: nowrap;
 
     span {
       font-family: $font-bold;
@@ -266,6 +267,66 @@ $shadows-big:    multiple-box-shadow(100);
   height: 8rem;
   width: 100%;
   clip-path: polygon(50% 0, 0 0, 0 100%, 50% 0, 100% 100%, 100% 0);
+}
+
+// Section 4
+.section4 {
+  padding: 8rem 0;
+  background: $purple;
+}
+
+.download_container {
+  margin: 0;
+}
+
+.winSVG {
+  min-width: 6rem;
+  width: 10vw;
+  max-width: 20rem;
+  fill: $cyan;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.downloadSVG {
+  min-width: 1.4rem;
+  width: 2.4vw;
+  max-width: 2.8rem;
+  fill: $black;
+  transition: 300ms;
+}
+
+.winDownloadBtn {
+  background: $cyan;
+  border: 1px solid $cyan;
+  border-radius: .3rem;
+  font-family: $font-bold;
+  color: $black;
+  padding: 2.4rem 6rem;
+  text-decoration: none;
+  transition: 300ms;
+  margin: 2rem 0 0 0;
+}
+
+.winDownloadBtn:hover {
+  border-radius: .1rem;
+  background: color.adjust($cyan, $alpha: -.9);
+  color: $cyan;
+
+  .downloadSVG {
+    fill: $cyan;
+  }
+}
+
+.downloadText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 14vw;
 }
 
 // Footer

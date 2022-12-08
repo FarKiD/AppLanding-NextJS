@@ -1,11 +1,30 @@
+import Swal from 'sweetalert2';
+
 import Link from 'next/link';
 
 import classes from '../styles/pages/index.module.scss';
 import SpeedSVG from '../assets/svg/speed.svg';
 import Businessman from '../assets/svg/businessman.svg';
 import Rocket from '../assets/svg/rocket.svg';
+import Windows from '../assets/svg/win.svg';
+import Download from '../assets/svg/download.svg';
 
 export default function Home() {
+  const downloadHandler = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    Swal.fire({
+      title: 'Sorry!',
+      text: 'The website is only a showcase, there is no real app to download',
+      color: '#ff2323',
+      background: '#191528',
+      icon: 'info',
+      scrollbarPadding: false,
+      iconColor: '#caf0f8',
+      confirmButtonText: 'Okay',
+      confirmButtonColor: '#5C162E'
+    });
+  }
+
   return (
     <>
     <main>
@@ -83,7 +102,23 @@ export default function Home() {
         </div>
       </section>
       <section className={classes.section4}>
-        DOWNLOAD SECTION
+        <div className={`${classes.download_container} row`}>
+          <div className={`${classes.download} offset-1 col-5`}>
+            <Windows className={classes.winSVG} />
+            <Link onClick={downloadHandler} href='#' className={classes.winDownloadBtn}>
+              <Download className={classes.downloadSVG} /> Win 8, 10, 11
+            </Link>
+          </div>
+          <div className={`${classes.downloadText} col`}>
+            <h4>Download for Windows OS</h4>
+            <p>
+              You can download our application for Windows Operating Systems by clicking the link on the left.
+            </p>
+            <p>
+            However this is a simple showcase website and there is no real app here, so it won't really work.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
     <footer className={classes.footer}>
