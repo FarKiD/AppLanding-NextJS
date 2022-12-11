@@ -9,7 +9,6 @@ body {
   margin: 0;
   height: 100%;
   letter-spacing: .8px;
-  // overflow-x: hidden;
 }
 
 body {
@@ -25,6 +24,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+// Scrollbar Style
+/* width */
+::-webkit-scrollbar {
+  width: .8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d9d9d9;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $red;
 }
 
 // * Font Sizes
@@ -44,11 +59,32 @@ h4, .h4 {
 p, a, .p, .a, li, input {
   font-size: $p;
 }
-span, .span {
-  // font-size: $span
+
+@media only screen and (min-width: 2000px) {
+  ::-webkit-scrollbar {
+    width: 1.2rem;
+  }
 }
 
 @media only screen and (max-width: 992px) {
+  h1, .h1 {
+    font-size: $h1-tablet;
+  }
+  h2, .h2 {
+    font-size: $h2-tablet;
+  }
+  h3, .h3 {
+    font-size: $h3-tablet;
+  }
+  h4, .h4 {
+    font-size: $h4-tablet;
+  }
+  p, a, .p, .a, li, input {
+    font-size: $p-tablet;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   h1, .h1 {
     font-size: $h1-phone;
   }
@@ -63,5 +99,23 @@ span, .span {
   }
   p, a, .p, .a, li, input {
     font-size: $p-phone;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  h1, .h1 {
+    font-size: $h1-xs;
+  }
+  h2, .h2 {
+    font-size: $h2-xs;
+  }
+  h3, .h3 {
+    font-size: $h3-xs;
+  }
+  h4, .h4 {
+    font-size: $h4-xs;
+  }
+  p, a, .p, .a, li, input {
+    font-size: $p-xs;
   }
 }

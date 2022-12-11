@@ -105,7 +105,7 @@ $shadows-big:    multiple-box-shadow(100);
 
 .introText {
   color: $cyan;
-  margin: 0 0 3rem 0;
+  margin: 0 2rem 3rem 2rem;
   text-align: center;
 
   h1 {
@@ -339,5 +339,95 @@ $shadows-big:    multiple-box-shadow(100);
 
   p {
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .section1 {
+    height: 50vh;
+    min-height: 50rem;
+    max-height: 100rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section1 {
+    height: 40vh;
+    min-height: 45rem;
+  }
+
+  .section2 {
+    height: unset;
+    align-items: center;
+  }
+
+  .whyUs {
+    width: fit-content;
+    margin: 0 0 2rem 0;
+    padding: 0 0 1rem 0;
+  }
+
+  .whyUs_container {
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+  }
+
+  .whyUs:nth-of-type(2) {
+    border: none;
+  }
+
+  .whyUs:nth-of-type(-n + 2) {
+    @include border-faded(0 0 .1rem 0, right, $red);
+  }
+
+  .section3 {
+    height: unset;
+  }
+
+  .contact_container {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .contactUs {
+    margin-bottom: 4rem;
+  }
+
+  .hireUs {
+    margin-bottom: 8rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .introBtn {
+    margin-bottom: 3.5rem;
+  }
+
+  .section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .download {
+    margin: 0 0 2.4rem 0;
+  }
+
+  .download_container {
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    flex-wrap: unset;
+  }
+
+  .downloadText {
+    margin-right: 0;
+  }
+
+  .winDownloadBtn {
+    padding: 1rem 4rem;
+    width: 18rem;
   }
 }

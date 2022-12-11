@@ -18,7 +18,7 @@ export default function Home() {
           </li>
           <li>
             <Link className={classes.headerLink} href="#">
-              Link 3
+              About
             </Link>
           </li>
         </ul>
