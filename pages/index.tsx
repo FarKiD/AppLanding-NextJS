@@ -44,14 +44,14 @@ export default function Home() {
           <h2>
             This is not an actual app, but a landing page for a fictional app.
             <br />
-            But it can be your dream app here on display; <span>Just Imagine!</span>
+            But it can be your dream app here on display; <span className={classes.imagine}>Just Imagine!</span>
           </h2>
         </div>
         <div className={classes.introSecondButtonsContainer}>
-          <Link className={classes.githubBtn} href={'#'}>
+          <Link className={classes.githubBtn} href={'#'} onClick={downloadHandler}>
             Source Code on Github
           </Link>
-          <Link className={classes.downloadBtn} href={'#'}>
+          <Link className={classes.downloadBtn} href={'#'} onClick={downloadHandler}>
             Download
           </Link>
         </div>

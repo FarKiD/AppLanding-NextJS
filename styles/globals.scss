@@ -42,6 +42,10 @@ a {
   background: $red;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: $red1;
+}
+
 // * Font Sizes
 h1, .h1 {
   font-size: $h1;
